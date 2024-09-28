@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="shortcut icon" href="contactUs.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #9ad3e3;
+        }
+
+        .business-card {
+            width: 600px;
+            height: 300px;
+            display: none; /* Initially hide the card */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+
+        /* Left side */
+        .left {
+            width: 50%;
+            background-color: #fff;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .left h1 {
+            font-size: 24px;
+            color: #f15a24;
+        }
+
+        .title {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .separator {
+            width: 50px;
+            height: 2px;
+            background-color: #f15a24;
+            margin-top: 10px;
+        }
+
+        /* Right side */
+        .right {
+            width: 50%;
+            background-color: #f15a24;
+            padding: 20px;
+            color: #fff;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .contact-item p {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Button to trigger the card */
+        .show-card-button {
+            padding: 10px 20px;
+            background-color: #f15a24;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .business-card {
+                flex-direction: column;
+                width: 100%;
+                height: auto;
+            }
+
+            .left, .right {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .profile-pic {
+                width: 80px;
+                height: 80px;
+            }
+
+            .left h1 {
+                font-size: 20px;
+            }
+            
+            .right {
+                padding: 20px;
+            }
+
+            .contact-item p {
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Button to show the card -->
+    <button class="show-card-button" onclick="showCard()">Show Contact Card</button>
+
+    <div class="business-card" id="business-card">
+        <!-- Left side -->
+        <div class="left">
+            <img src="mine.jpg" alt="Profile Picture" class="profile-pic">
+            <h1>Shivam Kumar</h1>
+            <p class="title">Software Engineer</p>
+            <div class="separator"></div>
+        </div>
+        
+        <!-- Right side -->
+        <div class="right">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <img src="phone.png" alt="Phone" class="icon">
+                    <p>+91 6203332018</p>
+                </div>
+                <div class="contact-item">
+                    <img src="email.png" alt="Email" class="icon">
+                    <p>jhashivamjha56789@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <img src="web.png" alt="Website" class="icon">
+                    <p>info@StudySync.com</p>
+                </div>
+                <div class="contact-item">
+                    <img src="location.png" alt="Location" class="icon">
+                    <p>Hajipur, Bihar</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Function to show the card
+        function showCard() {
+            document.getElementById('business-card').style.display = 'flex';
+        }
+
+        // Function to hide the card (optional)
+        function hideCard() {
+            document.getElementById('business-card').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

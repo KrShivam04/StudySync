@@ -1,0 +1,46 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: rgb(139, 225, 244);
+}
+
+.parentContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(139, 225, 244);
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.check a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: rgb(242, 242, 242);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.firstSection p img {
+    height: 3rem;
+    width: 3rem;
+}
+.firstSection {
+    background-color: rgb(139, 225, 244);
+    padding-top: 1rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
